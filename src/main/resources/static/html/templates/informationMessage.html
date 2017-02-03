@@ -1,0 +1,10 @@
+<div ng-controller="InformationController">
+	<div ng-show="showInfo()" class="info-messages-cover">
+		<div ng-show="showInfo()" class="info-messages">
+			<span class="glyphicon glyphicon-info-sign"></span> <b>Information</b><br>
+			<div ng-repeat="info in infoMessages">{{info}}</div>
+			<br>
+			<button ng-click="setInfos([]);">Ok</button>
+		</div>
+	</div>
+</div>

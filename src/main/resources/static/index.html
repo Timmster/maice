@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<title>Maice</title>
+<link rel="stylesheet" type="text/css"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" />
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="js/MaiceMain.js"></script>
+<script src="js/MaiceController.js"></script>
+<script src="js/controllers/InformationController.js"></script>
+<script src="js/controllers/PublicController.js"></script>
+<script src="js/controllers/HomeController.js"></script>
+<link rel="stylesheet" type="text/css" href="css/maice.css" />
+<style type="text/css">
+[ng\:cloak], [ng-cloak], .ng-cloak {
+	display: none !important;
+}
+</style>
+</head>
+
+<body ng-app="baseapp">
+  	<div ng-include="'html/templates/informationMessage.html'"></div>
+	<div ng-include="'html/templates/header.html'"></div>
+	<br>
+	<div ng-view class="container"></div>
+</body>
+</html>

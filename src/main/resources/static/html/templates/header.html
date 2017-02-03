@@ -1,0 +1,58 @@
+<div ng-controller="MaiceController" class="container">
+	<br>
+	<form role="form">
+		<div class="col-md-2">
+			<img width="100%" src="../../images/maice.png">
+		</div>
+		<div class="col-md-6">
+			<h1>
+				{{msg['app.header']}}
+			</h1>
+		</div>
+		<div ng-show="!isAuthenticated()" class="col-md-4">
+			<span ng-repeat="lang in msgKeys" class="pull-right">
+				<img ng-click="changeLanguage(lang);" class="languages" ng-src="../../images/languages/{{lang}}.gif">
+			</span>
+			<div>
+				<div class="col-md-12">
+					<b><span ng-show="!registration">{{msg['app.login.text']}}</span><span ng-show="registration">{{msg['app.registration.text']}}</span></b>
+				</div>
+				<div class="row"></div>
+				<div class="col-md-12">
+					<input class="form-component" type="email" id="username"
+						name="username" placeholder="Email"
+						ng-model="credentials.username" />
+				</div>
+				<div class="row"></div>
+				<div class="col-md-12">
+					<input class="form-component" type="password"
+						placeholder="Passwort" id="password" name="password"
+						ng-model="credentials.password" />
+				</div>
+				<div class="row"></div>
+				<div class="col-md-12">
+					<button ng-show="!registration" class="form-component" ng-click="login()" type="submit">{{msg['app.login.button']}}</button>
+					<button ng-show="registration" class="form-component" ng-click="login()" type="submit">{{msg['app.registration.button']}}</button>
+				</div>
+				<div class="row"></div>
+				<div class="row"></div>
+				<div class="col-md-12">
+					<div class="app-login-div-error" ng-show="error">{{msg['app.login.fail']}}</div>
+				</div>
+				<div class="row"></div>
+				<div class="col-md-12">
+					<div>
+						<b><a id="reglink1" ng-show="!registration" href class="registrationlink"
+							ng-click="registration=!registration">{{msg['app.login.change']}}</a>
+							<a id="reglink2" ng-show="registration" href class="registrationlink"
+							ng-click="registration=!registration">{{msg['app.registration.change']}}</a>
+						</b>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div ng-show="isAuthenticated()" class="col-md-4 pull-right">
+			<button ng-click="logout()" type="button" class="pull-right">Abmelden</button>
+		</div>
+	</form>
+</div>

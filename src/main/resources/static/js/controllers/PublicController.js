@@ -1,0 +1,3 @@
+register('PublicController', function (MaiceService) {
+	
+});

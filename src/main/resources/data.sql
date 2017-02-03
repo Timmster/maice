@@ -1,0 +1,1 @@
+INSERT INTO MAICE.USER (ID, USERNAME, PASSWORDHASH, ACTIVATIONHASH) VALUES (null, 'maiceapp@gmail.com', 'admin', null);
