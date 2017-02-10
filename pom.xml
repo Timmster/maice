@@ -7,10 +7,8 @@
 	<artifactId>maice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-
 	<name>maice</name>
 	<description>Maice app</description>
-
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -31,12 +29,13 @@
 		</dependency>
 		
 		<!-- START: CHANGE FOR DEPLOYMENT -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		 -->
 		<!-- DEVIDOR: CHANGE FOR DEPLOYMENT -->
-		<!--<dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<exclusions>
@@ -50,7 +49,7 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<scope>provided</scope>
-		</dependency> -->
+		</dependency>
 		<!-- END: CHANGE FOR DEPLOYMENT -->
 		<dependency>
 			<groupId>com.h2database</groupId>
