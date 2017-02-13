@@ -20,15 +20,14 @@ public class MessageController extends AbstractMaiceController {
 
 	private static HashMap<String, Properties> messagesForCountryCode = new HashMap<String, Properties>();
 
-	private static final String[] languages = {"de", "en"};
+	private static final String[] languages = {"de"};
 	
 	
 	public MessageController() {
 		if (MessageController.messagesForCountryCode.size() == 0) {
 			for (String lang : languages) {
 			  try {
-			    InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream("messages_" + lang + ".properties");
-//			    InputStream in = getClass().getResourceAsStream("messages_" + lang + ".properties");
+			    InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream("languages\\messages_" + lang + ".properties");
 		      Properties p = new Properties();
 		      p.load(in);
 		      in.close();
